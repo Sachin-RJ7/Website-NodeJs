@@ -4,6 +4,7 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const app = express();
 const Detail = require("./models/Detail"); // importing from Detail.js
+const Slider = require("./models/Slider"); // importing from Slider.js
 
 const routes = require("./routes/main");
 
@@ -22,6 +23,23 @@ mongoose.connect("mongodb://0.0.0.0:27017/website_nodejs", (err) => {
   }
   else {
     console.log("Mongodb is connected");
+    // Slider.create([
+    //   {
+    //     title:`Learn Java in very easy manner`,
+    //     subTitle:`Java is one of the most popular programming language.`,
+    //     imageUrl:"/static/images/bg.jpg"
+    //   },       
+    //   {
+    //     title:`What is Django in Python`,
+    //     subTitle:`Django is very famous web framework of python programming.`,
+    //     imageUrl:"/static/images/bg1.jpg"
+    //   },
+    //   {
+    //     title:`What about node js`,
+    //     subTitle:`Node js is runtime environment to execute javascript outside browser.`,
+    //     imageUrl:"/static/images/bg3.jpg"
+    //   },
+    // ])
   }
 })
 

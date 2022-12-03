@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const Detail = require("./models/Detail"); // importing from Detail.js
 const Slider = require("./models/Slider"); // importing from Slider.js
+const Service = require("./models/Service"); // importing from Service.js
 
 const routes = require("./routes/main");
 
@@ -23,6 +24,31 @@ mongoose.connect("mongodb://0.0.0.0:27017/website_nodejs", (err) => {
   }
   else {
     console.log("Mongodb is connected");
+
+    // Service.create([
+    //   {
+    //     icon:'fa-brands fa-accusoft',
+    //     title:'Provide Best Courses',
+    //     description:'We provide courses that helps our student in learning and in placement.',
+    //     linkText:'http://www.wikipedia.com',
+    //     link:'Check'
+    //   },
+    //   {
+    //     icon:'fa-brands fa-affiliatetheme',
+    //     title:'Learn with Projects',
+    //     description:'We provide courses that helps our student in learning and in placement.',
+    //     linkText:'http://www.wikipedia.com',
+    //     link:'Learn'
+    //   },
+    //   {
+    //     icon:'fa-solid fa-user',
+    //     title:'Learn with Mentors',
+    //     description:'We provide courses that helps our student in learning and in placement.',
+    //     linkText:'http://www.wikipedia.com',
+    //     link:'Your Mentors'
+    //   }
+    // ])
+
     // Slider.create([
     //   {
     //     title:`Learn Java in very easy manner`,

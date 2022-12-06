@@ -8,6 +8,11 @@ const Slider = require("./models/Slider"); // importing from Slider.js
 const Service = require("./models/Service"); // importing from Service.js
 
 const routes = require("./routes/main");
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({
+  extended:true
+}))
 
 app.use("/static", express.static("public"));
 app.use("", routes);

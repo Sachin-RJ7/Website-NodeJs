@@ -1,9 +1,10 @@
 const express = require('express');
-const{route} = require('express/lib/application')
+const{route} = require('express/lib/application');
 
 const Detail = require("../models/Detail");
 const Service = require('../models/Service');
 const Slider = require('../models/Slider');
+const Contact = require('../models/Contact');
 
 const routes = express.Router();
 
@@ -24,6 +25,24 @@ routes.get('/gallery', async (req, res)=> {
     res.render('gallery',{
         details:details
     });
+});
+
+
+// process contact form
+routes.post('/process-contact-form', async (request,response)=>{
+    console.log("form is submitted");
+    console.log(request.body);
+    // save the data to database.
+    try{
+        const data = await Contact.create(request.body);
+        console.log(data);
+        response.redirect('/')
+    }
+    catch(e){
+        console.log(e);
+        response.redirect('/')
+    }
+
 });
 
 

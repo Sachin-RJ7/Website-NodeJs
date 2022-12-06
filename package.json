@@ -1,0 +1,29 @@
+{
+  "name": "dynamic_website",
+  "version": "1.0.0",
+  "description": "I am creating this website while learning nodejs and mongodb concepts and how to implement these conpts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js -e js,hbs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sachin-RJ7/Website-NodeJs.git"
+  },
+  "author": "Sachin kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sachin-RJ7/Website-NodeJs/issues"
+  },
+  "homepage": "https://github.com/Sachin-RJ7/Website-NodeJs#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
